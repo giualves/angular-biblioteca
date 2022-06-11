@@ -1,0 +1,10 @@
+<p>Generos</p>
+
+<button class="btn-info" 
+    *ngFor="let genero of (generos$ | async)" 
+    (click)="selecionaLivro(genero)"
+    type="button"
+    >
+{{genero.nome}}
+    
+</button>

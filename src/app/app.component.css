@@ -1,0 +1,26 @@
+:host {
+    display: flex;
+    gap: 1em;
+}
+
+nav {
+    flex: 20em 0 1;
+}
+main {
+    flex: auto;
+    text-align: center;
+}
+@media screen and (max-width: 30em) {
+    :host {
+        flex-direction: column;
+    }
+    nav {
+        flex: auto 0 1;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    image-orientation: flip;
+}

@@ -1,0 +1,37 @@
+
+<nav>
+  <app-lista-genero (generoSelecionado)="exibeGenero($event)">
+
+  </app-lista-genero>
+  
+
+</nav>
+
+<main *ngIf="generoParaExibir">
+
+
+  <h1>{{generoParaExibir.nome}}</h1>
+  <div *ngFor="let livro of generoParaExibir.livros">
+
+
+      <div class="col">
+        <div class="col-sm-2">
+          <div class="card">
+            <img class="card-img-top" src="{{livro.imagem}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{livro.nome }}</h5>
+              <p class="card-text">{{livro.autor}}</p>
+              <p class="card-text">{{livro.data}}</p>
+              <button type="button" class="btn btn-info" data-bs-toggle="collapse" data-bs-target="#demo">Saiba mais</button>
+              <div id="demo" class="collapse">
+                <p class="card-text">{{livro.resumo}}</p>
+              </div>     
+
+            </div>        
+          </div>
+        </div>        
+      </div>
+  </div>
+
+</main>
+<router-outlet></router-outlet>
